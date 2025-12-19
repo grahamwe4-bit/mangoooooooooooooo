@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mangoooooooooooooo — Mainframe Search</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="console">
+    <header class="console-header">
+      <div class="brand">
+        <span class="logo">MANG🍋</span>
+        <span class="title">MAINFRAME SEARCH</span>
+      </div>
+      <div class="status">STATUS: ONLINE</div>
+    </header>
+
+    <main class="console-body">
+      <section class="left-panel">
+        <div class="screen-title">SCRAMJET PROXY SEARCH</div>
+
+        <form id="search-form" autocomplete="off" novalidate>
+          <label for="q" class="sr">Search</label>
+          <div class="input-row">
+            <input id="q" name="q" type="search" placeholder="type query — e.g. 'streams in Rust'">
+            <button id="search-btn" type="submit" aria-label="Search">RUN</button>
+          </div>
+          <div class="hints">Press Enter or click RUN — results stream below</div>
+        </form>
+
+        <div id="log" class="log" aria-live="polite" aria-atomic="false">
+          <div class="log-line muted">> Awaiting input...</div>
+        </div>
+      </section>
+
+      <section class="right-panel">
+        <div class="panel-title">LIVE FEED</div>
+        <div id="results" class="results">
+          <!-- results appear here -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="console-footer">
+      <small>Interface: coding mainframe | Engine: scramjet-proxy (client)</small>
+    </footer>
+  </div>
+
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
